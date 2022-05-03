@@ -1,0 +1,23 @@
+{
+  "name": "rawg-project",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Selim-Ramdani/RAWG-API.git"
+  },
+  "keywords": [],
+  "author": "Selim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Selim-Ramdani/RAWG-API/issues"
+  },
+  "homepage": "https://github.com/Selim-Ramdani/RAWG-API#readme",
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}

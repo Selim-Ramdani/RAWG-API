@@ -1,0 +1,1 @@
+(()=>{const n=()=>{const{hash:n}=window.location,t=n.substring(1).split("/"),o=t[0],d=t[1]||"",e=routes[o];void 0!==e&&e(d)};window.addEventListener("hashchange",(()=>n())),window.addEventListener("DOMContentLoaded",(()=>n()))})();
