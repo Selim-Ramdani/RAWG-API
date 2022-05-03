@@ -1,0 +1,13 @@
+$bg: rgb(82, 67, 72);
+$text: rgb(255, 255, 255);
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../assets/fonts/FiraCode-VariableFont_wght.ttf');
+}
+
+* {
+  background: $bg;
+  color: $text;
+  font-family: 'Fira Code';
+}

@@ -1,3 +1,5 @@
+import { Home } from './Home';
+
 const PageList = (argument = '') => {
   const preparePage = () => {
     const cleanedArgument = argument.trim().replace(/\s+/g, '-');
@@ -22,7 +24,7 @@ const PageList = (argument = '') => {
         });
     };
 
-    fetchList(`https://api.rawg.io/api/games?key=${API_KEY}`, cleanedArgument);
+    fetchList(`https://api.rawg.io/api/games?key=${process.env.API_KEY}`, cleanedArgument);
   };
 
   const render = () => {
@@ -37,3 +39,5 @@ const PageList = (argument = '') => {
 
   render();
 };
+
+export { PageList };
