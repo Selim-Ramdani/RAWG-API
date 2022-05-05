@@ -3,7 +3,6 @@
 
 # RAWG-API
 Pars à l'aventure, recherche par toi-même les données qui t'intéressent !
-
 Créé dans le cadre d'un projet/exercice chez The Hacking Project, un bootcamp de 6 mois pour découvrir le monde du développement Web (et++).
 ## WEB version 🌐
 
@@ -19,7 +18,7 @@ Le site est en live ici 👉 [RAWG-API](https://selim-ramdani.github.io/RAWG-API
  de cette manière : API_KEY="your_key"
 3. Build(ez) le projet en tapant : npm run build
 
-# 🛠️ Remerciements
+##  🛠️ Remerciements
 Merci à nos amis de RAWGX, qui nous ont permis de profiter d'un tas d'informations à exploiter via leur API.
 
 🌟 You are all set!
