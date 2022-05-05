@@ -1,7 +1,4 @@
 import './style/index.scss';
-import { Home } from './js/Home';
-import { PageList } from './js/PageList';
-import { PageDetail } from './js/PageDetail';
 import { routes } from "./js/routes";
 
 let pageArgument;

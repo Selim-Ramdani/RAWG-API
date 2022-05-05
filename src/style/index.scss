@@ -25,8 +25,6 @@ body {
 a {
   background-color: rgb(0, 0, 0);
   color: $primary-color;
-  border: 2px solid rgb(255, 255, 255);
-  border: 1px solid;
   transition: .3s ease-in;
   box-shadow: none;  
 }
@@ -64,14 +62,21 @@ a:hover {
 }
 
 #input-search {
-  background-color: #242424;
-  border: 1px solid rgb(138, 138, 138);
+  background-color: transparent;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(124, 113, 113, 0.2);
   padding: 10px 20px;
   color: #fff;
 }
 
 .description {
-  margin-left: 10px;
+  font-size: 1.3em;
+  font-weight: 900;
+  width: auto;
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
 }
 
 .card-game {
@@ -86,6 +91,8 @@ a:hover {
       width: 400px;
       height: 300px;
       object-fit: cover;
+      border-radius: 10px;
+
     }
   }
 }
@@ -100,7 +107,7 @@ a:hover {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: rgba(39,40,34,0.6);
 }
 
 .card-game:hover .overlay {
@@ -109,7 +116,7 @@ a:hover {
 
 .text {
   color: white;
-  font-size: 20px;
+  font-size: 14px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -119,6 +126,10 @@ a:hover {
   text-align: center
 }
 
+.card-title {
+  font-size: 3em;
+  font-weight: bold;
+}
 
 .page-list .articles {
   display: flex;
@@ -131,8 +142,59 @@ a:hover {
   margin-top: 25px;
 }
 
+.article {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
 .article img {
+  display: flex;
+  border-radius: 8px;
+  margin: 0 auto;
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
+}
+
+.title {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.container-img {
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+}
+
+.container-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(39,40,34,0.6);
+}
+
+.container-img:hover .overlay {
+  opacity: 1;
+}
+
+.article-description {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 900;
+  padding: 3em
 }

@@ -13,8 +13,8 @@ const Home = () => {
               <article class="card-game"> <a href="#pagedetail/${article.slug}">
                 <div class="overlay">
                   <div class="text">
-                    <h1>Nom du jeu : ${article.name}</h1>
-                    <h2>Release-Date : ${article.released}</h2>
+                    <h1 class="card-title">${article.name}</h1>
+                    <h2 class="card-released">${article.rating}/5</h2>
                   </div>
                 </div>
                 <div class="card-game__img__container">
@@ -36,6 +36,15 @@ const Home = () => {
 
   const render = () => {
     pageContent.innerHTML = `<div class="description">
+    <div class="presentation">
+      <p class="description">
+        The Hyper Progame is the world’s premier event for computer and video games and related products. At The Hyper Progame,
+        the video game industry’s top talent pack the Los Angeles Convention Center, connecting tens of thousands of the best,
+        brightest, and most innovative in the interactive entertainment industry. For three exciting days, leading-edge companies,
+        groundbreaking new technologies, and never-before-seen products will be showcased. The Hyper Progame connects you
+        with both new and existing partners, industry executives, gamers, and social influencers providing unprecedented exposure.
+      </p>
+    </div>
       <h2>Some recent games released in 2022 :</h2>
     </div><br>
       <section class="page-list">
