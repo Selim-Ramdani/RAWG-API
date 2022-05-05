@@ -1,13 +1,112 @@
-$bg: rgb(82, 67, 72);
-$text: rgb(255, 255, 255);
+$bg: rgb(0, 0, 0);
+$primary-color: rgb(170, 170, 170);
+$link-color: rgb(29, 27, 27);
+$title-color: rgb(189, 4, 4);
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('../assets/fonts/FiraCode-VariableFont_wght.ttf');
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-ExtraLight.ttf')
 }
 
 * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
   background: $bg;
-  color: $text;
-  font-family: 'Fira Code';
+  color: $primary-color;
+  font-family: 'Poppins';
+  font-weight:800;
+  font-size: 10px;
+}
+
+a {
+  background-color: rgb(0, 0, 0);
+  color: $primary-color;
+  border: 2px solid rgb(255, 255, 255);
+  border: 1px solid;
+  transition: .3s ease-in;
+  box-shadow: none;  
+}
+
+a:hover {
+  box-shadow: 4px 4px 0 rgb(255, 255, 255);
+}
+
+#title {
+  color: $title-color;
+  margin-left: 10px;
+}
+.presentation {
+  margin-left: 10px;
+  margin-top: 20px;
+  color: $primary-color;
+  width: auto;
+  background-color: $bg;
+
+  &__h1 {
+    font-size: 50px;
+  }
+
+}
+
+#container {
+
+}
+#container-text {
+  margin-top: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content:space-around;
+}
+
+#search-section{
+  align-items: center;
+  font-size: 30px;
+}
+
+#input-search {
+  background-color: #242424;
+  border: 1px solid rgb(138, 138, 138);
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.description {
+  margin-left: 10px;
+}
+
+.card-game {
+  width: 400px;
+  margin-bottom: 10px;
+
+  &__img__container {
+    width: 400px;
+    height: 300px;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.page-list .articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 28px;
+  justify-content: center;
+}
+
+#pageContent {
+  margin-top: 25px;
+}
+
+.article img {
+  width: 80%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }

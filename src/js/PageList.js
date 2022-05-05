@@ -1,36 +1,45 @@
-import { Home } from './Home';
-
-const PageList = (argument = '') => {
+const PageList = (argument = "") => {
   const preparePage = () => {
-    const cleanedArgument = argument.trim().replace(/\s+/g, '-');
-
-    const displayResults = (articles) => {
-      const resultsContent = articles.map((article) => (
-        `<article class="cardGame">
-          <h1>${article.name}</h1>
-          <h2>${article.released}</h2>
-          <a href="#pagedetail/${article.id}">${article.id}</a>
-        </article>`));
-      const resultsContainer = document.querySelector('.page-list .articles');
-      resultsContainer.innerHTML = resultsContent.join("\n");
-    };
+    const cleanedArgument = argument.replace(/\s+/g, "-");
+    let articles = "";
 
     const fetchList = (url, argument) => {
-      const finalURL = argument ? `${url}&search=${argument}` : url;
-      fetch(finalURL)
+      let finalURL = url;
+      if (argument) {
+        finalURL = url + "&search=" + argument;
+      }
+
+      fetch(`${finalURL}`)
         .then((response) => response.json())
-        .then((responseData) => {
-          displayResults(responseData.results)
+        .then((response) => {
+          console.log(response);
+          response.results.forEach((article) => {
+            console.log(article);
+            articles += `
+              <article class="card-game">
+                <div class="card-game__img__container">
+                  <img src="${article.background_image}">
+                  <h1>Nom du jeu : ${article.name}</h1>
+                  <h2>Date de sortie : ${article.released}</h2>
+                  <a href="#pagedetail/${article.slug}">${article.name}</a>
+                </div>
+              </article>
+          `;
+          });
+          document.querySelector(".page-list .articles").innerHTML = articles;
         });
     };
 
-    fetchList(`https://api.rawg.io/api/games?key=${process.env.API_KEY}`, cleanedArgument);
+    fetchList(
+      `https://api.rawg.io/api/games?key=${process.env.API_KEY}`,
+      cleanedArgument + "&page_size=12"
+    );
   };
 
   const render = () => {
     pageContent.innerHTML = `
       <section class="page-list">
-        <div class="articles">Loading...</div>
+        <div class="articles">...loading</div>
       </section>
     `;
 

@@ -2,11 +2,102 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[3]!./src/style/index.scss ***!
   \*************************************************************************************************************************************************************************************/
 @font-face {
-  font-family: "Fira Code";
-  src: url(34819243c250aa2fd908.ttf);
+  font-family: "Poppins";
+  src: url(333cb30c20e31999802a.ttf);
 }
 * {
-  background: rgb(82, 67, 72);
-  color: rgb(255, 255, 255);
-  font-family: "Fira Code";
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  color: rgb(170, 170, 170);
+  font-family: "Poppins";
+  font-weight: 800;
+  font-size: 10px;
+}
+
+a {
+  background-color: rgb(0, 0, 0);
+  color: rgb(170, 170, 170);
+  border: 2px solid rgb(255, 255, 255);
+  border: 1px solid;
+  transition: 0.3s ease-in;
+  box-shadow: none;
+}
+
+a:hover {
+  box-shadow: 4px 4px 0 rgb(255, 255, 255);
+}
+
+#title {
+  color: rgb(189, 4, 4);
+  margin-left: 10px;
+}
+
+.presentation {
+  margin-left: 10px;
+  margin-top: 20px;
+  color: rgb(170, 170, 170);
+  width: auto;
+  background-color: rgb(0, 0, 0);
+}
+.presentation__h1 {
+  font-size: 50px;
+}
+
+#container-text {
+  margin-top: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#search-section {
+  align-items: center;
+  font-size: 30px;
+}
+
+#input-search {
+  background-color: #242424;
+  border: 1px solid rgb(138, 138, 138);
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.description {
+  margin-left: 10px;
+}
+
+.card-game {
+  width: 400px;
+  margin-bottom: 10px;
+}
+.card-game__img__container {
+  width: 400px;
+  height: 300px;
+}
+.card-game__img__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-list .articles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 28px;
+  justify-content: center;
+}
+
+#pageContent {
+  margin-top: 25px;
+}
+
+.article img {
+  width: 80%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
