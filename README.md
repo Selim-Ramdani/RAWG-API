@@ -20,7 +20,7 @@ Le site est en live ici 👉 [RAWG-API](https://selim-ramdani.github.io/RAWG-API
 3. Build(ez) le projet en tapant : npm run build
 
 ## 🛠️ API OMDB-API
-Merci à mes amis de RAWGX de m'avoir permis de profiter d'un tas d'informations à exploiter via leur API.
+Merci à nos amis de RAWGX, qui nous ont permis de profiter d'un tas d'informations à exploiter via leur API.
 
 🌟 You are all set!
 ## Crédit 🔗
