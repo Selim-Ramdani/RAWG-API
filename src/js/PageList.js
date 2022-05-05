@@ -20,8 +20,9 @@ const PageList = (argument = "") => {
                 <div class="card-game__img__container">
                   <img src="${article.background_image}">
                   <h1>Nom du jeu : ${article.name}</h1>
-                  <h2>Date de sortie : ${article.released}</h2>
-                  <a href="#pagedetail/${article.slug}">${article.name}</a>
+                  <h2>Date de sortie : ${article.rating}</h2>
+                  <a href="#pagedetail/${article.name}">${article.name}</a>
+
                 </div>
               </article>
           `;

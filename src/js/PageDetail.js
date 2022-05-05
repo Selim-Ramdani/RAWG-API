@@ -14,7 +14,7 @@ const PageDetail = (argument = "") => {
         .then((response) => response.json())
         .then((response) => {
           console.log(response);
-          let { name, released, description, background_image } = response;
+          let { name, released, description, background_image, rating, developers, platforms } = response;
 
           let articleDOM = document.querySelector(".page-detail .article");
 
@@ -26,6 +26,17 @@ const PageDetail = (argument = "") => {
           .innerHTML = description;
           articleDOM.querySelector("img")
           .src = background_image;
+          articleDOM.querySelector(".ratings")
+          .innerHTML = `Rating : ${rating}`       
+          articleDOM.querySelector(".developers")
+          .innerHTML = developers.map((d) => {
+            return d.name + " "
+          })
+          articleDOM.querySelector(".platforms")
+          .innerHTML = platforms.map((p) => {
+            return p.platform.name + " / "
+          })
+    
         });
     };
     fetchGame(`https://api.rawg.io/api/games/`, cleanedArgument);
@@ -43,6 +54,15 @@ const PageDetail = (argument = "") => {
             <p class="release-date"></p>
           </div>
           <div class="descriptions">
+            <p></p>
+          </div>
+          <div class="platforms">
+            <p></p>
+          </div>
+          <div class="ratings">
+            <p></p>
+          </div>
+          <div class="developers">
             <p></p>
           </div>
         </div>

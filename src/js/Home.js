@@ -14,7 +14,7 @@ const Home = () => {
                 <div class="card-game__img__container">
                   <img src="${article.background_image}">
                   <h1>Nom du jeu : ${article.name}</h1>
-                  <h2>Date de sortie : ${article.released}</h2>
+                  <h2>Release-Date : ${article.released}</h2>
                   <a href="#pagedetail/${article.slug}">${article.name}</a>
                 </div>
               </article>
