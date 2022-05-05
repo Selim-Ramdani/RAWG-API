@@ -10,19 +10,23 @@ const Home = () => {
           console.log(response);
           response.results.forEach((article) => {
             articles += `
-              <article class="card-game">
-                <div class="card-game__img__container">
-                  <img src="${article.background_image}">
-                  <h1>Nom du jeu : ${article.name}</h1>
-                  <h2>Release-Date : ${article.released}</h2>
-                  <a href="#pagedetail/${article.slug}">${article.name}</a>
+              <article class="card-game"> <a href="#pagedetail/${article.slug}">
+                <div class="overlay">
+                  <div class="text">
+                    <h1>Nom du jeu : ${article.name}</h1>
+                    <h2>Release-Date : ${article.released}</h2>
+                  </div>
                 </div>
-              </article>
+                <div class="card-game__img__container">
+                  <img src="${article.background_image}"> 
+                </div>
+              </a>
+            </article>
           `;
           });
           document.querySelector(".page-list .articles").innerHTML = articles;
         })
-        .catch((error) => console.log("Une erreur est survenue"))
+        .catch((error) => console.log("Une erreur est survenue"));
     };
 
     fetchList(
