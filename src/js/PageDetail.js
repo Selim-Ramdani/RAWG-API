@@ -34,7 +34,7 @@ const PageDetail = (argument = "") => {
           //})
           articleDOM.querySelector(".platforms")
           .innerHTML = platforms.map((p) => {
-            return p.platform.name + " / "
+            return p.platform.name + " "
           })
     
         });
@@ -56,8 +56,7 @@ const PageDetail = (argument = "") => {
                 <img src="" alt="game image">
           </div>
             <div class="overlay">
-              <div class="text"><p>Hello world</p></div>
-              </div>
+              <div class="game-info"
             </div>
           <div class="release">
             <p class="release-date"></p>
@@ -67,6 +66,8 @@ const PageDetail = (argument = "") => {
           </div>
           <div class="ratings">
             <p></p>
+          </div>
+          </div>
           </div>
         </div>
       </section>

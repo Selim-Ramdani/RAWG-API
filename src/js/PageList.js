@@ -16,16 +16,18 @@ const PageList = (argument = "") => {
           response.results.forEach((article) => {
             console.log(article);
             articles += `
-              <article class="card-game">
-              
-                <div class="card-game__img__container">
-                  <img src="${article.background_image}">
-                  <h1>Nom du jeu : ${article.name}</h1>
-                  <h2>Date de sortie : ${article.rating}</h2>
-                  <a href="#pagedetail/${article.name}">${article.name}</a>
-
+              <article class="card-game"> <a href="#pagedetail/${article.slug}">
+                <div class="overlay">
+                  <div class="text">
+                    <h1 class="card-title">${article.name}</h1>
+                    <h2 class="card-released">${article.rating}/5</h2>
+                  </div>
                 </div>
-              </article>
+                <div class="card-game__img__container">
+                  <img src="${article.background_image}"> 
+                </div>
+              </a>
+            </article>
           `;
           });
           document.querySelector(".page-list .articles").innerHTML = articles;

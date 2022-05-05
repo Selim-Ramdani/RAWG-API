@@ -192,3 +192,11 @@ a:hover {
   font-weight: 900;
   padding: 3em;
 }
+
+.game-info {
+  font-size: 2em;
+  font-weight: 900;
+  position: absolute;
+  bottom: 3%;
+  margin-left: 2em;
+}
