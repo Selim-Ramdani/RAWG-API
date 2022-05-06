@@ -12,7 +12,6 @@ module.exports = (env) => {
     filename: "bundle.js",
     publicPath: '',
   },
-  mode: env.NODE_ENV,
   module: {
     rules: [
       {
@@ -70,6 +69,5 @@ module.exports = (env) => {
   },
 
   mode: 'development',
-  watch: true,
 };
 };
